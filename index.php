@@ -13,12 +13,12 @@
     integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
     crossorigin="anonymous"
   />
-  <title>荆棘留言版</title>
+  <title>荆棘留言板</title>
 </head>
 <body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
 <header class="mdui-appbar">
   <div class="mdui-toolbar mdui-color-theme">
-    <div class="mdui-typo-headline">荆棘留言版</div>
+    <div class="mdui-typo-headline">荆棘留言板</div>
   </div>
 </header>
 <main class="mdui-container">
