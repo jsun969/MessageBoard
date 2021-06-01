@@ -1,0 +1,2 @@
+const $ = mdui.$;
+mdui.mutation();
