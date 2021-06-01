@@ -26,17 +26,20 @@
     <div class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6 userInfo">
       <i class="mdui-icon material-icons">account_circle</i>
       <label class="mdui-textfield-label">昵称</label>
-      <input class="mdui-textfield-input userInfoInput" type="text"/>
+      <input class="mdui-textfield-input userInfoInput" type="text" required/>
+      <div class="mdui-textfield-error">昵称不能为空</div>
     </div>
     <div class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6 userInfo">
       <i class="mdui-icon material-icons">email</i>
       <label class="mdui-textfield-label">邮箱</label>
-      <input class="mdui-textfield-input userInfoInput" type="email"/>
+      <input class="mdui-textfield-input userInfoInput" type="email" required/>
+      <div class="mdui-textfield-error">邮箱格式错误</div>
     </div>
     <div class="mdui-textfield mdui-col-xs-12">
-      <textarea class="mdui-textfield-input" rows="4" placeholder="说点什么~"></textarea>
+      <textarea class="mdui-textfield-input" rows="5" placeholder="说点什么~" required></textarea>
+      <div class="mdui-textfield-error">内容不能为空</div>
     </div>
-    <div class="mdui-col-xs-12 mdui-m-t-3">
+    <div class="mdui-col-xs-12">
       <label class="mdui-checkbox">
         <input type="checkbox" id="isAnonymous"/>
         <i class="mdui-checkbox-icon"></i>
