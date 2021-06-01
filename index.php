@@ -23,20 +23,20 @@
 </header>
 <main class="mdui-m-t-4 mdui-container">
   <form action="" class="mdui-m-b-2 mdui-col-xs-12">
-    <div class="mdui-textfield mdui-col-xs-6">
-      <i class="mdui-icon material-icons">email</i>
-      <input class="mdui-textfield-input" type="email" placeholder="邮箱"/>
-    </div>
-    <div class="mdui-textfield mdui-col-xs-6">
+    <div class="mdui-textfield mdui-col-xs-6 userInfo">
       <i class="mdui-icon material-icons">account_circle</i>
-      <input class="mdui-textfield-input" type="text" placeholder="昵称"/>
+      <input class="mdui-textfield-input userInfoInput" type="text" placeholder="昵称"/>
+    </div>
+    <div class="mdui-textfield mdui-col-xs-6 userInfo">
+      <i class="mdui-icon material-icons">email</i>
+      <input class="mdui-textfield-input userInfoInput" type="email" placeholder="邮箱"/>
     </div>
     <div class="mdui-textfield mdui-col-xs-12">
       <textarea class="mdui-textfield-input" rows="4" placeholder="说点什么~"></textarea>
     </div>
     <div class="mdui-col-xs-12 mdui-m-t-3">
       <label class="mdui-checkbox">
-        <input type="checkbox"/>
+        <input type="checkbox" id="isAnonymous"/>
         <i class="mdui-checkbox-icon"></i>
         匿名
       </label>
