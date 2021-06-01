@@ -21,15 +21,17 @@
     <div class="mdui-typo-headline">荆棘留言版</div>
   </div>
 </header>
-<main class="mdui-m-t-4 mdui-container">
+<main class="mdui-container">
   <form action="" class="mdui-m-b-2 mdui-col-xs-12">
-    <div class="mdui-textfield mdui-col-xs-6 userInfo">
+    <div class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6 userInfo">
       <i class="mdui-icon material-icons">account_circle</i>
-      <input class="mdui-textfield-input userInfoInput" type="text" placeholder="昵称"/>
+      <label class="mdui-textfield-label">昵称</label>
+      <input class="mdui-textfield-input userInfoInput" type="text"/>
     </div>
-    <div class="mdui-textfield mdui-col-xs-6 userInfo">
+    <div class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6 userInfo">
       <i class="mdui-icon material-icons">email</i>
-      <input class="mdui-textfield-input userInfoInput" type="email" placeholder="邮箱"/>
+      <label class="mdui-textfield-label">邮箱</label>
+      <input class="mdui-textfield-input userInfoInput" type="email"/>
     </div>
     <div class="mdui-textfield mdui-col-xs-12">
       <textarea class="mdui-textfield-input" rows="4" placeholder="说点什么~"></textarea>
