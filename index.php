@@ -6,7 +6,6 @@
   <meta name="renderer" content="webkit"/>
   <meta name="force-rendering" content="webkit"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <link rel="stylesheet" href="./css/index.css">
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
@@ -22,26 +21,26 @@
   </div>
 </header>
 <main class="mdui-container">
-  <form action="" class="mdui-m-b-2 mdui-col-xs-12">
+  <form action="" method="post" class="mdui-m-b-2 mdui-col-xs-12">
     <div class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6 userInfo">
       <i class="mdui-icon material-icons">account_circle</i>
       <label class="mdui-textfield-label">昵称</label>
-      <input class="mdui-textfield-input userInfoInput" type="text" required/>
+      <input class="mdui-textfield-input userInfoInput" type="text" name="name" required/>
       <div class="mdui-textfield-error">昵称不能为空</div>
     </div>
     <div class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6 userInfo">
       <i class="mdui-icon material-icons">email</i>
       <label class="mdui-textfield-label">邮箱</label>
-      <input class="mdui-textfield-input userInfoInput" type="email" required/>
+      <input class="mdui-textfield-input userInfoInput" type="email" name="email" required/>
       <div class="mdui-textfield-error">邮箱格式错误</div>
     </div>
     <div class="mdui-textfield mdui-col-xs-12">
-      <textarea class="mdui-textfield-input" rows="5" placeholder="说点什么~" required></textarea>
+      <textarea class="mdui-textfield-input" rows="5" placeholder="说点什么~" name="message" required></textarea>
       <div class="mdui-textfield-error">内容不能为空</div>
     </div>
     <div class="mdui-col-xs-12">
       <label class="mdui-checkbox">
-        <input type="checkbox" id="isAnonymous"/>
+        <input type="checkbox" id="isAnonymous" name="isAnonymous"/>
         <i class="mdui-checkbox-icon"></i>
         匿名
       </label>
