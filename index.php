@@ -47,26 +47,33 @@
       <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme mdui-float-right" type="submit">留言</button>
     </div>
   </form>
+  <?php
+  $time = new DateTime('20210504083705');
+  $messages = array(
+    array("isAnonymous" => false, "name" => "test1", "time" => $time, "message" => "测试"),
+    array("isAnonymous" => false, "name" => "lol", "time" => $time, "message" => "阿巴阿巴阿巴"),
+    array("isAnonymous" => true, "time" => $time, "message" => "Who am I"),
+  );
+  foreach ($messages as $message) {
+    if ($message["isAnonymous"]) { ?>
+      <div class="mdui-card mdui-col-xs-12 mdui-m-y-2 mdui-color-grey-900 mdui-text-color-white-text">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-subtitle mdui-float-right"><?php echo $message["time"]->format("Y年m月d日 H:i:s"); ?></div>
+          <div class="mdui-card-primary-title">匿名</div>
+        </div>
+        <div class="mdui-card-content mdui-typo"><?php echo $message["message"]; ?></div>
+      </div>
+    <?php } else { ?>
+      <div class="mdui-card mdui-hoverable mdui-col-xs-12 mdui-m-y-2">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-subtitle mdui-float-right"><?php echo $message["time"]->format("Y年m月d日 H:i:s"); ?></div>
+          <div class="mdui-card-primary-title"><?php echo $message["name"]; ?></div>
+        </div>
+        <div class="mdui-card-content mdui-typo"><?php echo $message["message"]; ?></div>
+      </div>
+    <?php } ?>
+  <?php } ?>
 
-  <div class="mdui-card mdui-hoverable mdui-col-xs-12 mdui-m-y-2">
-    <div class="mdui-card-primary">
-      <div class="mdui-card-primary-subtitle mdui-float-right">2020年3月20日 12:10:30</div>
-      <div class="mdui-card-primary-title">荆棘</div>
-    </div>
-    <div class="mdui-card-content mdui-typo">
-      测试消息
-    </div>
-  </div>
-
-  <div class="mdui-card mdui-col-xs-12 mdui-m-y-2 mdui-color-grey-900 mdui-text-color-white-text">
-    <div class="mdui-card-primary">
-      <div class="mdui-card-primary-subtitle mdui-float-right">2020年3月20日 12:10:30</div>
-      <div class="mdui-card-primary-title">???</div>
-    </div>
-    <div class="mdui-card-content mdui-typo">
-      测试匿名消息
-    </div>
-  </div>
 
 </main>
 <script
