@@ -25,17 +25,18 @@
     <div class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6 userInfo">
       <i class="mdui-icon material-icons">account_circle</i>
       <label class="mdui-textfield-label">昵称</label>
-      <input class="mdui-textfield-input userInfoInput" type="text" name="name" required/>
+      <input class="mdui-textfield-input userInfoInput" type="text" name="name" maxlength="15" required/>
       <div class="mdui-textfield-error">昵称不能为空</div>
     </div>
     <div class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6 userInfo">
       <i class="mdui-icon material-icons">email</i>
       <label class="mdui-textfield-label">邮箱</label>
-      <input class="mdui-textfield-input userInfoInput" type="email" name="email" required/>
+      <input class="mdui-textfield-input userInfoInput" type="email" name="email" maxlength="30" required/>
       <div class="mdui-textfield-error">邮箱格式错误</div>
     </div>
     <div class="mdui-textfield mdui-col-xs-12">
-      <textarea class="mdui-textfield-input" rows="5" placeholder="说点什么~" name="message" required></textarea>
+      <textarea class="mdui-textfield-input" rows="5" placeholder="说点什么~" name="message" maxlength="300"
+                required></textarea>
       <div class="mdui-textfield-error">内容不能为空</div>
     </div>
     <div class="mdui-col-xs-12">
@@ -58,7 +59,8 @@
     if ($message["isAnonymous"]) { ?>
       <div class="mdui-card mdui-col-xs-12 mdui-m-y-2 mdui-color-grey-900 mdui-text-color-white-text">
         <div class="mdui-card-primary">
-          <div class="mdui-card-primary-subtitle mdui-float-right"><?php echo $message["time"]->format("Y年m月d日 H:i:s"); ?></div>
+          <div
+            class="mdui-card-primary-subtitle mdui-float-right"><?php echo $message["time"]->format("Y年m月d日 H:i:s"); ?></div>
           <div class="mdui-card-primary-title">匿名</div>
         </div>
         <div class="mdui-card-content mdui-typo"><?php echo $message["message"]; ?></div>
@@ -66,7 +68,8 @@
     <?php } else { ?>
       <div class="mdui-card mdui-hoverable mdui-col-xs-12 mdui-m-y-2">
         <div class="mdui-card-primary">
-          <div class="mdui-card-primary-subtitle mdui-float-right"><?php echo $message["time"]->format("Y年m月d日 H:i:s"); ?></div>
+          <div
+            class="mdui-card-primary-subtitle mdui-float-right"><?php echo $message["time"]->format("Y年m月d日 H:i:s"); ?></div>
           <div class="mdui-card-primary-title"><?php echo $message["name"]; ?></div>
         </div>
         <div class="mdui-card-content mdui-typo"><?php echo $message["message"]; ?></div>
