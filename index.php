@@ -22,19 +22,7 @@
   </div>
 </header>
 <main class="mdui-container">
-  <?php
-  $conn = new mysqli(db_host, db_username, db_password, db_name, db_port);
-  if ($stmt = $conn->prepare("INSERT INTO message (`is_anonymous`,`ip`,`name`,`email`,`message`) VALUES (?,?,?,?,?)")) {
-    $stmt->bind_param("issss", $isAnonymous, $ip, $name, $email, $message);
-    $isAnonymous = (bool)$_POST["isAnonymous"];
-    $ip = $_SERVER['REMOTE_ADDR'];
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
-    $stmt->execute();
-  }
-  ?>
-  <form action="" method="post" class="mdui-m-b-2 mdui-col-xs-12">
+  <form action="submit.php" method="post" class="mdui-m-b-2 mdui-col-xs-12">
     <div class="mdui-textfield mdui-textfield-floating-label mdui-col-xs-6 userInfo">
       <i class="mdui-icon material-icons">account_circle</i>
       <label class="mdui-textfield-label">昵称</label>
@@ -62,18 +50,14 @@
     </div>
   </form>
   <?php
-  $time = new DateTime('20210504083705');
-  $messages = array(
-    array("isAnonymous" => false, "name" => "test1", "time" => $time, "message" => "测试"),
-    array("isAnonymous" => false, "name" => "lol", "time" => $time, "message" => "阿巴阿巴阿巴"),
-    array("isAnonymous" => true, "time" => $time, "message" => "Who am I"),
-  );
+  $conn = new mysqli(db_host, db_username, db_password, db_name, db_port);
+  $messages = $conn->query("SELECT date,is_anonymous,name,email,message FROM message ORDER BY id DESC");
   foreach ($messages as $message) {
-    if ($message["isAnonymous"]) { ?>
+    if ($message["is_anonymous"]) { ?>
       <div class="mdui-card mdui-col-xs-12 mdui-m-y-2 mdui-color-grey-900 mdui-text-color-white-text">
         <div class="mdui-card-primary">
           <div
-            class="mdui-card-primary-subtitle mdui-float-right"><?php echo $message["time"]->format("Y年m月d日 H:i:s"); ?></div>
+            class="mdui-card-primary-subtitle mdui-float-right"><?php echo date_create($message["date"])->format("Y年m月d日 H:i:s"); ?></div>
           <div class="mdui-card-primary-title">匿名</div>
         </div>
         <div class="mdui-card-content mdui-typo"><?php echo $message["message"]; ?></div>
@@ -82,7 +66,7 @@
       <div class="mdui-card mdui-hoverable mdui-col-xs-12 mdui-m-y-2">
         <div class="mdui-card-primary">
           <div
-            class="mdui-card-primary-subtitle mdui-float-right"><?php echo $message["time"]->format("Y年m月d日 H:i:s"); ?></div>
+            class="mdui-card-primary-subtitle mdui-float-right"><?php echo date_create($message["date"])->format("Y年m月d日 H:i:s"); ?></div>
           <div class="mdui-card-primary-title"><?php echo $message["name"]; ?></div>
         </div>
         <div class="mdui-card-content mdui-typo"><?php echo $message["message"]; ?></div>
