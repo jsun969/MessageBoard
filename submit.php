@@ -23,7 +23,7 @@ if ($stmt = $conn->prepare("INSERT INTO message (`is_anonymous`,`ip`,`name`,`ema
 ?>
 <script type="text/javascript">
   alert('留言成功');
-  window.location = "index.php";
+  window.location = "/";
 </script>
 </body>
 </html>
