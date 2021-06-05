@@ -14,7 +14,7 @@ CREATE TABLE `message` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 ```
 
-使用前需自行添加**config.php**
+然后创建**config.php**
 ```php
 <?php
 // 网站标题
