@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
+<?php include './config.php'; ?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
@@ -12,17 +13,16 @@
     integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
     crossorigin="anonymous"
   />
-  <title>荆棘留言板</title>
+  <title><?php echo title; ?></title>
 </head>
 <body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
 <header class="mdui-appbar">
   <div class="mdui-toolbar mdui-color-theme">
-    <div class="mdui-typo-headline">荆棘留言板</div>
+    <div class="mdui-typo-headline"><?php echo title; ?></div>
   </div>
 </header>
 <main class="mdui-container">
   <?php
-  include './config.php';
   $conn = new mysqli(db_host, db_username, db_password, db_name, db_port);
   if ($stmt = $conn->prepare("INSERT INTO message (`is_anonymous`,`ip`,`name`,`email`,`message`) VALUES (?,?,?,?,?)")) {
     $stmt->bind_param("issss", $isAnonymous, $ip, $name, $email, $message);
