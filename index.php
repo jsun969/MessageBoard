@@ -60,16 +60,16 @@
             class="mdui-card-primary-subtitle mdui-float-right"><?php echo date_create($message["date"])->format("Y年m月d日 H:i:s"); ?></div>
           <div class="mdui-card-primary-title">匿名</div>
         </div>
-        <div class="mdui-card-content mdui-typo"><?php echo $message["message"]; ?></div>
+        <div class="mdui-card-content mdui-typo"><?php echo htmlspecialchars($message["message"]) ?></div>
       </div>
     <?php } else { ?>
       <div class="mdui-card mdui-hoverable mdui-col-xs-12 mdui-m-y-2">
         <div class="mdui-card-primary">
           <div
             class="mdui-card-primary-subtitle mdui-float-right"><?php echo date_create($message["date"])->format("Y年m月d日 H:i:s"); ?></div>
-          <div class="mdui-card-primary-title"><?php echo $message["name"]; ?></div>
+          <div class="mdui-card-primary-title"><?php echo htmlspecialchars($message["name"]) ?></div>
         </div>
-        <div class="mdui-card-content mdui-typo"><?php echo $message["message"]; ?></div>
+        <div class="mdui-card-content mdui-typo"><?php echo htmlspecialchars($message["message"]) ?></div>
       </div>
     <?php } ?>
   <?php } ?>
