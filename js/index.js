@@ -4,7 +4,7 @@ if (localStorage.getItem('name')) {
   $('.userInfoInput').prop('value', index => localStorage.getItem(index ? 'email' : 'name'));
 }
 
-let colorIndex = +localStorage.getItem('color');
+let colorIndex = localStorage.getItem('color') ? +localStorage.getItem('color') : 4;
 const color = ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'teal', 'brown', 'blue-grey'];
 $('body').addClass(`mdui-theme-primary-${color[colorIndex]} mdui-theme-accent-pink`);
 
