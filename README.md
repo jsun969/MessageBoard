@@ -1,18 +1,8 @@
 # MessageBoard
-A simple message board with PHP
+A simple message board with PHP and MDUI  
+一个简单的PHP留言板
 
-先创建一个名为**message**的数据表
-```sql
-CREATE TABLE `message` (
-    `id` int NOT NULL,
-    `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `ip` varchar(150) DEFAULT NULL,
-    `is_anonymous` tinyint(1) NOT NULL,
-    `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-    `email` varchar(150) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-    `message` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-```
+首先请导入**message.sql**至数据库
 
 然后创建**config.php**
 ```php
