@@ -15,11 +15,12 @@
   />
   <title><?php echo title; ?></title>
 </head>
-<body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
+<body>
 <header class="mdui-appbar">
   <div class="mdui-toolbar mdui-color-theme">
     <div class="mdui-typo-headline"><?php echo title; ?></div>
     <div class="mdui-toolbar-spacer"></div>
+    <a class="mdui-btn mdui-btn-icon" id="color"><i class="mdui-icon material-icons">color_lens</i></a>
     <a href="https://github.com/jsun969/MessageBoard" target="_blank"
        class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white">
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
