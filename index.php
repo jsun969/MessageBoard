@@ -60,9 +60,16 @@
         <i class="mdui-checkbox-icon"></i>
         匿名
       </label>
-      <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme mdui-float-right" id="submit" type="submit">
-        <i class="mdui-icon mdui-icon-right material-icons">send</i>留言
-      </button>
+      <div class="mdui-float-right">
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-amber mdui-text-color-white-text mdui-m-r-1"
+                id="reset" type="reset">
+          <i class="mdui-icon mdui-icon-right material-icons">delete_sweep</i>清空
+        </button>
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme mdui-float-right" id="submit"
+                type="submit">
+          <i class="mdui-icon mdui-icon-right material-icons">send</i>留言
+        </button>
+      </div>
     </div>
   </form>
   <?php

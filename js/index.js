@@ -27,3 +27,8 @@ $('#submit').on('click', () => {
     });
   }
 });
+
+$('#reset').on('click', () => {
+  localStorage.removeItem('name');
+  localStorage.removeItem('email');
+});
