@@ -60,7 +60,9 @@
         <i class="mdui-checkbox-icon"></i>
         匿名
       </label>
-      <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme mdui-float-right" type="submit">留言</button>
+      <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme mdui-float-right" type="submit">
+        <i class="mdui-icon mdui-icon-right material-icons">send</i>留言
+      </button>
     </div>
   </form>
   <?php
