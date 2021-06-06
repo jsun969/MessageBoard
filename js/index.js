@@ -1,5 +1,9 @@
 const $ = mdui.$;
 
+if (localStorage.getItem('name')) {
+  $('.userInfoInput').prop('value', index => localStorage.getItem(index ? 'email' : 'name'));
+}
+
 let userInfoTmp = [];
 $('#isAnonymous').on('click', () => {
   $('.userInfoInput').prop({
@@ -14,4 +18,12 @@ $('#isAnonymous').on('click', () => {
     }
   });
   mdui.updateTextFields($('.userInfo'));
+});
+
+$('#submit').on('click', () => {
+  if (!$('#isAnonymous').prop('checked')) {
+    $('.userInfoInput').prop('value', (index, oldValue) => {
+      localStorage.setItem(index ? 'email' : 'name', oldValue);
+    });
+  }
 });
