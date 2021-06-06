@@ -1,6 +1,6 @@
 # MessageBoard
 A simple message board with PHP and MDUI  
-一个简单的PHP留言板
+一个简单的PHP+MDUI留言板
 
 首先请导入**message.sql**至数据库
 
